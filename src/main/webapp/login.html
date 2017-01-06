@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="assets/public/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/public/css/myLogin.css">
+<script type="text/javascript" src="assets/public/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="assets/public/js/login.js"></script>
+<title>Insert title here</title>
+</head>
+	<div class="login">
+		<div class="login_bg" id="login_img">
+			<div class="container" id="login_container">
+				<div id="err"></div>
+				<form id="checkLoginId" class="form-horizontal" role="form" action="/Exam-12647-20170106-1/mylogin/customerLogin" method="get" onsubmit="return checkLogin()">
+					<div id="form_div">
+						<div class="form-group">
+							<label class="control-lable col-sm-3" >firstName</label>
+							<div class="col-sm-4">
+								<input id="firstName" class="form-control" type="text" placeholder="firstName" name="firstName">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-lable col-sm-3" >lastName</label>
+							<div class="col-sm-4">
+								<input id="lastName" class="form-control" type="text" placeholder="可以不填" name="lastName">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-lable col-sm-3" >password&nbsp</label>
+							<div class="col-sm-4">
+								<input id="password"  class="form-control" type="password" placeholder="可以不填" name="userPassword">
+							</div>
+						</div>					
+						<div>
+							<button id="loginButton" type="button" onclick="$('#checkLoginId').submit()" class="btn btn-default">登录</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="welcome">欢迎来到电影租赁系统登录界面</div>
+	</div>
+</body>
+</html>

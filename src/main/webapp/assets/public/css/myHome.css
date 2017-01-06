@@ -1,0 +1,52 @@
+.date{
+	line-height: 50px;
+	font-weight: 900;
+	font-style: normal;
+	color:#ffffff;
+}
+
+
+.user{
+	line-height: 50px;
+	font-weight: 900;
+	font-style: normal;
+	color:#ffffff;
+	margin-left: 50%;
+}
+
+.left-container{
+	width: 200px;
+	position:relative;
+	float:left;
+}
+
+.panel{
+	background-color: #c0c0c0;
+	display: none;
+}
+
+.list-group-item {
+	background-color:#ffffff;
+	font-weight: 900;
+}
+
+#color:HOVER{
+	color:#ffffff;
+	background-color: #2e2e2e;
+}
+
+.right-container{
+	width: 800px;
+	position:relative;
+	margin-left:50px;
+	float:left;
+}
+
+.iframe-right{
+	width: 900px;
+	height: 500px;
+}
+
+.hov:HOVER{
+	background-color: #000000;
+}

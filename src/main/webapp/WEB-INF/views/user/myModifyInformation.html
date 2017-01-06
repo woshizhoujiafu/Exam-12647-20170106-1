@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../assets/public/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/public/css/myAddInformation.css">
+<script type="text/javascript" src="../assets/public/js/jquery-3.1.1.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+	 	<div id="tag">
+			<a href="#">>>AddInformation</a>
+		</div>
+		<div id="return">
+			<a href="/Exam-12647-20170106-1/operation/show?pageCurrent=${pageCurrent}&queryData=${queryData}">返回</a>
+		</div>
+    </nav>
+	<div class="container" id="add">
+		<div id="add-form">
+			<form role="form" class="form-horizontal" action="/Exam-12647-20170106-1/operation/modify" method="post" onsubmit="return checkValue()">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">title</label>
+					<div class="col-sm-4">
+						<input id="title" class="form-control" type="text" name="title" value="${film.title}">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">languageName</label>
+					<div class="col-sm-4">
+						<select id="select" class="form-control" name="name">
+						<option id="firstSelect" value="">${film.name}</option>
+							<c:forEach items="${list}" var="language">
+								<option  value="${language.name}">${language.name}</option>
+							</c:forEach>
+						</select>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-sm-3 control-label">description</label>
+					<div class="col-sm-6">
+						<textarea id="description" class="form-control" rows=5 name="description">${film.description}</textarea>
+					</div>
+				</div>
+				<div>
+					<button id="btn" type="submit" class="btn btn-default">确认</button>
+					<input type="hidden" name="pageCurrent" value="${pageCurrent}">
+					<input type="hidden" name="queryData" value="${queryData}">
+					<input type="hidden" name="filmId" value="${film.filmId}">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript">
+		function checkValue(){
+			var title = document.getElementById("title").value;
+			var description = document.getElementById("description").value;
+			if(description==""){
+				alert("description不能为空")
+				return false;
+			}else if(title==""){
+				alert("title不能为空")
+				return false;
+			}else{
+				return true;
+			}			
+		}
+	</script>
+</html>

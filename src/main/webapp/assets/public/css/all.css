@@ -1,0 +1,13 @@
+*{
+	margin: 0px;
+	padding:0px;
+	
+	
+}
+
+a:LINK {
+	text-decoration: none;
+}
+a:HOVER {
+	color:graytext;
+}

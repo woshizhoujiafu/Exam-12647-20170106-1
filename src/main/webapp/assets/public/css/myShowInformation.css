@@ -1,0 +1,89 @@
+#queryData{
+	width: 200px;
+	margin-top:8px;
+	margin-left:10px;
+	float:left;
+}
+
+#input-height{
+	margin-top:13px; 
+	margin-left:350px;
+	float: left;
+}
+
+.return{
+	margin-right: 10px;
+	margin-top:13px;
+	float: right;
+	font-weight: 900;
+}
+
+#tab th,td{
+	text-align: center;
+}
+
+#body{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#change{
+	margin-left:30%;
+	margin-top: 10px;
+}
+
+#change a{
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+	font-weight: 800;
+	margin-left: 5px;
+}
+
+#change a:HOVER {
+	background-color: #0000ff;
+}
+
+#tab{
+	width:800px;
+	border-style: none;
+	border-collapse:collapse;
+	border:1px solid #c0c0c0;
+}
+#tab tr th{
+	background-color: #808080;
+	border:1px solid #c0c0c0;
+	color:#ffffff;
+	height: auto;
+}
+
+#tab tr td{	
+	border:1px solid #c0c0c0;
+	text-align: center;
+	width: auto;
+	height: 40px;
+}
+
+#tab tr .td2{
+	width:300px;
+}
+#tab tr .td3{
+	width:200px;
+}
+#tab tr .td4{
+	width:100px;
+}
+#tab tr .td1{
+	width:60px;
+}
+
+#tag{
+	margin-left: 10px;
+	margin-top:13px;
+	float: left;
+	font-weight: 900;
+}
+
+#tab tr:HOVER {
+	background-color: #e8e8e8;
+}

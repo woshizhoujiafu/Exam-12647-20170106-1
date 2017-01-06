@@ -1,0 +1,31 @@
+#return{
+	margin-right: 10px;
+	margin-top:13px;
+	float: right;
+	font-weight: 900;
+}
+
+#add{
+	width: 800px;
+}
+
+#add-form{
+	margin-top: 10%;
+	margin-left: 25%;
+}
+
+#tag{
+	margin-left: 10px;
+	margin-top:13px;
+	float: left;
+	font-weight: 900;
+}
+
+#btn{
+	margin-left: 35%;
+	background-color: #c0c0c0;
+}
+
+#select{
+
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="hand.zjf.dao.UserOperationDao">
+	<delete id="delete"  parameterType="int">
+		delete from film where film_id = #{filmId};
+	</delete>
+	
+	<insert id="filmAdd" parameterType="Film">
+		insert into film(title,description,language_id) values(#{title},#{description},#{languageId})
+	</insert>
+	
+	<select id="getLanguageNameByFilmId" parameterType="int" resultType="String">
+		select name from film f,language l where film_id = #{filmId} and f.language = l.language
+	</select>
+	
+	<select id="getLanguageIdByLanguageName" parameterType="String" resultType="int">
+		select language_id from language where name = #{name}
+	</select>
+	
+	<update id="modifyFilm" parameterType="Film">
+		update film 
+		set title = #{title},description = #{description},language_id = #{languageId}
+		where film_id = #{filmId}
+	</update>
+	
+	<select id="jumpModifyFilm"  parameterType="int" resultType="Film">
+		select film_id,title,description,f.language_id,name from film f,language l 
+		where film_id = #{filmId} and f.language_id = l.language_id
+	</select>
+	
+	<select id="getLanguageList" resultType="Language">
+		select name from language;
+	</select>
+	
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="hand.zjf.dao.GetFilmDao">
+	<select id="getCount"  resultType="int">
+		select count(1) from film
+		<where>
+			<if test="_parameter!='null'">
+				description like "%"#{queryData}"%" or title like "%"#{queryData}"%"
+			</if>
+		</where>
+	</select>
+	<select id="getFilmList"  resultType="Film">
+		select film_id,title,description,f.language_id,name from film f,language l
+		<where>
+			<if test="1==1">
+				f.language_id = l.language_id
+			</if>
+			<if test="queryData!='null'">
+			and	(description like "%"#{queryData}"%" or title like "%"#{queryData}"%")
+			</if>
+		</where>	
+		order by film_id asc limit ${pageStart},${pageSize};
+	</select>
+</mapper>

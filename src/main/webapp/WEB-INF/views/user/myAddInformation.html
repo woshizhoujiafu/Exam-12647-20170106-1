@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../assets/public/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/public/css/myAddInformation.css">
+<script type="text/javascript" src="../assets/public/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../assets/public/js/myAddInformation.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+	 	<div id="tag">
+			<a href="/Exam-12647-20170106-1/operation/iframeRight">>>Home</a><span>>>AddInformation</span>
+		</div>
+		<div id="return">
+			<a href="/Exam-12647-20170106-1/operation/iframeRight">返回</a>
+		</div>
+    </nav>
+	<div class="container" id="add">
+		<div id="add-form">
+			<form role="form" class="form-horizontal" action="#" method="get" onsubmit="return checkValue()">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">title</label>
+					<div class="col-sm-4">
+						<input id="title" class="form-control" type="text" name="title">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">languageName</label>
+					<div class="col-sm-4">
+						<select id="select" class="form-control" name="name">
+						</select>
+					</div>
+				</div>
+				<div class="form-group ">
+					<label class="col-sm-3 control-label">description</label>
+					<div class="col-sm-4">
+						<textarea id="description" class="form-control" rows=5 name="description"></textarea>
+					</div>
+				</div>
+				<div>
+					<button id="btn" type="submit" class="btn btn-default">保存</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript">	
+		function checkValue(){
+			var title = document.getElementById("title").value;
+			var description = document.getElementById("description").value;
+			if(description==""){
+				alert("description不能为空")
+				return false;
+			}else if(title==""){
+				alert("title不能为空")
+				return false;
+			}else{
+				return true;
+			}
+				
+		}
+	</script>
+</html>

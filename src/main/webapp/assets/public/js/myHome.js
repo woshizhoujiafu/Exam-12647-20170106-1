@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$(function(){
+		$.ajax({
+			url:"/Exam-12647-20170106-1/operation/getUserName.json",
+			success:function(datas){
+				$("#userName").text("欢迎"+datas.userName);
+			}
+		});
+	});
+});
