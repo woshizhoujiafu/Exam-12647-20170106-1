@@ -11,7 +11,11 @@ $(document).ready(function(){
 		});
 	});
 	
-	$("#btn").on("click",function(){
+	saveAddFilm();
+	
+	function saveAddFilm(){
+	$("#saveButton").on("click",function(e){
+		e.preventDefault(); 
 		var data = {"title":$("#title").val(),"name":$("#select").val(),"description":$("#description").val()};
 		$.ajax({
 			type:"post",
@@ -20,9 +24,10 @@ $(document).ready(function(){
 			success:function(datas){
 				alert(datas.msg);
 			},
-			error:function(datas){
-				alert("数据插成功");
+			error:function(){
+				alert("添加数据失败");
 			}
 		});
 	});
+	}
 });
